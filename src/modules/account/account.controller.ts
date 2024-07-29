@@ -8,6 +8,9 @@ import { ApiTags } from '@nestjs/swagger';
 @Controller('account')
 @Crud({
   model: { type: Account },
+  routes: {
+    only: ['getManyBase']
+  },
   query: {
     join: {
       bank: {
