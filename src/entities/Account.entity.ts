@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from "typeorm";
 import { Base } from "./Base.entity.js";
 import { Bank } from "./Bank.entity.js";
-import { TransactionHistory } from "./TransactionHistory.js";
+import { TransactionHistory } from "./TransactionHistory.entity.js";
 
 @Entity('accounts')
 export class Account extends Base {

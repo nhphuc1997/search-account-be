@@ -2,7 +2,7 @@ import { Controller } from '@nestjs/common';
 import { TransactionHistoryService } from './transaction-history.service';
 import { ApiTags } from '@nestjs/swagger';
 import { Crud, CrudController } from '@dataui/crud';
-import { TransactionHistory } from 'src/entities/TransactionHistory';
+import { TransactionHistory } from 'src/entities/TransactionHistory.entity';
 
 @ApiTags('TRANSACTION HISTORY API')
 @Crud({
@@ -10,7 +10,8 @@ import { TransactionHistory } from 'src/entities/TransactionHistory';
   routes: { only: ['getManyBase'] },
   query: {
     join: {
-      publisherAccount: { eager: true }
+      publisherAccount: { eager: true },
+      issuerAccount: { eager: true },
     }
   }
 })
