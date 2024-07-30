@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from "typeorm";
 import { Base } from "./Base.entity.js";
 import { Bank } from "./Bank.entity.js";
 
@@ -7,13 +7,13 @@ export class Account extends Base {
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column({ nullable: false, unique: true })
+  @Column({ nullable: false })
   accountDigit: string
 
   @Column({ nullable: false, unique: true })
   phoneNumber: string
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, unique: true })
   idCard: string
 
   @Column({ nullable: false })
