@@ -9,7 +9,7 @@ import { Bank } from 'src/entities/Bank.entity';
 @Crud({
   model: { type: Bank },
   routes: {
-    only: ['getManyBase']
+    only: ['getManyBase', 'getOneBase']
   }
 })
 export class BankController implements CrudController<Bank> {
