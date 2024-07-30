@@ -14,7 +14,7 @@ import { TransactionHistory } from 'src/entities/TransactionHistory';
     }
   }
 })
-@Controller('transaction-history')
+@Controller('lookup-account-be/transaction-history')
 export class TransactionHistoryController implements CrudController<TransactionHistory> {
   constructor(public readonly service: TransactionHistoryService) { }
 }

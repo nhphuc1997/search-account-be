@@ -7,13 +7,13 @@ export class Account extends Base {
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, unique: true })
   accountDigit: string
 
   @Column({ nullable: false, unique: true })
   phoneNumber: string
 
-  @Column({ nullable: false, unique: true })
+  @Column({ nullable: false })
   idCard: string
 
   @Column({ nullable: false })

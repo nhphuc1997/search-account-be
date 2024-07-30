@@ -5,7 +5,6 @@ import { Account } from 'src/entities/Account.entity';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('ACCOUNT API')
-@Controller('account')
 @Crud({
   model: { type: Account },
   routes: {
@@ -19,6 +18,7 @@ import { ApiTags } from '@nestjs/swagger';
     }
   }
 })
+@Controller('lookup-account-be/account')
 export class AccountController implements CrudController<Account> {
   constructor(public readonly service: AccountService) { }
 }
