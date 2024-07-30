@@ -11,6 +11,7 @@ import { TransactionHistory } from 'src/entities/TransactionHistory';
   query: {
     join: {
       retrieverAccount: { eager: true },
+      senderAccount: { eager: true },
     }
   }
 })
