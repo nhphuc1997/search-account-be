@@ -11,7 +11,7 @@ import { Bank } from 'src/entities/Bank.entity';
     only: ['getManyBase', 'getOneBase']
   }
 })
-@Controller('lookup-account-be/bank')
+@Controller('backend/bank')
 export class BankController implements CrudController<Bank> {
   constructor(public readonly service: BankService) { }
 }

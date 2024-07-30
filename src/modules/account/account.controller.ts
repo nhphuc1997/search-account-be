@@ -18,7 +18,7 @@ import { ApiTags } from '@nestjs/swagger';
     }
   }
 })
-@Controller('lookup-account-be/account')
+@Controller('backend/account')
 export class AccountController implements CrudController<Account> {
   constructor(public readonly service: AccountService) { }
 }
