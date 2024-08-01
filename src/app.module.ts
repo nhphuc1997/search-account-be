@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AccountModule } from './modules/account/account.module';
 import { BankModule } from './modules/bank/bank.module';
 import { TransactionHistoryModule } from './modules/transaction-history/transaction-history.module';
+import { WarningModule } from './modules/warning/warning.module';
 
 @Module({
   imports: [
@@ -25,7 +26,8 @@ import { TransactionHistoryModule } from './modules/transaction-history/transact
     }),
     AccountModule,
     BankModule,
-    TransactionHistoryModule
+    TransactionHistoryModule,
+    WarningModule
   ],
 })
 export class AppModule { }
