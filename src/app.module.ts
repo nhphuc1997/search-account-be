@@ -5,6 +5,7 @@ import { AccountModule } from './modules/account/account.module';
 import { BankModule } from './modules/bank/bank.module';
 import { TransactionHistoryModule } from './modules/transaction-history/transaction-history.module';
 import { WarningModule } from './modules/warning/warning.module';
+import { VerifyCodeModule } from './modules/verify-code/verify-code.module';
 
 @Module({
   imports: [
@@ -27,7 +28,8 @@ import { WarningModule } from './modules/warning/warning.module';
     AccountModule,
     BankModule,
     TransactionHistoryModule,
-    WarningModule
+    WarningModule,
+    VerifyCodeModule
   ],
 })
 export class AppModule { }
