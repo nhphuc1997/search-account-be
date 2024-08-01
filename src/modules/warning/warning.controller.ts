@@ -5,7 +5,7 @@ import { Warning } from 'src/entities/Warning.entity';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags("WARNING API")
-@Controller('warning')
+@Controller('backend/warning')
 @Crud({
   model: { type: Warning },
   routes: { only: ['getManyBase'] },

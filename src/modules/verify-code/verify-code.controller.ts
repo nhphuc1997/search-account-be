@@ -5,7 +5,7 @@ import { VerifyCode } from 'src/entities/VerifyCode.entity';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags("VERIFY-CODE API")
-@Controller('verify-code')
+@Controller('backend/verify-code')
 @Crud({
   model: { type: VerifyCode },
   routes: { only: ['createOneBase',] },
