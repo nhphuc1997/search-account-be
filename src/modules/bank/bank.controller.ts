@@ -8,7 +8,7 @@ import { Bank } from 'src/entities/Bank.entity';
 @Crud({
   model: { type: Bank },
   routes: {
-    only: ['getManyBase', 'getOneBase']
+    only: ['getManyBase']
   }
 })
 @Controller('backend/bank')
