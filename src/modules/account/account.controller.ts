@@ -15,6 +15,7 @@ import { ApiTags } from '@nestjs/swagger';
       bank: { eager: true },
       warning: { eager: true },
       notification: { eager: true },
+      transactionGroup: { eager: true },
     }
   }
 })
