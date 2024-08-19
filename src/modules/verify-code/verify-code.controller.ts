@@ -5,12 +5,12 @@ import { VerifyCode } from 'src/entities/VerifyCode.entity';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags("VERIFY-CODE API")
-@Controller('backend/verify-code')
 @Crud({
   model: { type: VerifyCode },
   routes: { only: ['createOneBase',] },
 
 })
+@Controller('search/backend/verify-code')
 export class VerifyCodeController implements CrudController<VerifyCode> {
   constructor(public readonly service: VerifyCodeService) { }
 }
