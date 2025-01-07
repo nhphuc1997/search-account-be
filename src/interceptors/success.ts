@@ -14,15 +14,18 @@ export interface Response<T> {
 
 @Injectable()
 export class SuccessInterceptor<T> implements NestInterceptor<T, Response<T>> {
-  intercept(context: ExecutionContext, next: CallHandler): Observable<Response<T>> {
+  intercept(
+    context: ExecutionContext,
+    next: CallHandler,
+  ): Observable<Response<T>> {
     return next.handle().pipe(
       map((data) => {
-        return ({
+        return {
           data: data,
           statusCode: HttpStatus.OK,
           message: 'OK',
           error: null,
-        })
+        };
       }),
     );
   }

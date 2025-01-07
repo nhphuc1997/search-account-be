@@ -11,7 +11,7 @@ import { Category } from 'src/entities/Category.entity';
     only: ['getOneBase', 'getManyBase'],
   },
 })
-@Controller('super-market/backend/account')
+@Controller('super-market/backend/category')
 export class AccountController implements CrudController<Category> {
   constructor(public readonly service: CategoryService) {}
 }
