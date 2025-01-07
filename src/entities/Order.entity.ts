@@ -1,20 +1,21 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { Base } from './Base.entity';
+import { ApiProperty } from '@dataui/crud/lib/crud';
 
-@Entity('product')
-export class Product extends Base {
+@Entity('order')
+export class Order extends Base {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column({ nullable: true })
-  name: string;
+  @ApiProperty()
+  order_number: string;
 
   @Column({ nullable: true })
-  price: string;
+  @ApiProperty()
+  total_price: string;
 
   @Column({ nullable: true })
-  thumnail: string;
-
-  @Column({ nullable: true })
-  images: string;
+  @ApiProperty()
+  user_name: string;
 }

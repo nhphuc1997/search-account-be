@@ -1,15 +1,14 @@
 import { Controller } from '@nestjs/common';
 import { Crud, CrudController } from '@dataui/crud';
 import { ApiTags } from '@nestjs/swagger';
-import { Category } from 'src/entities/Category.entity';
 import { Product } from 'src/entities/Product.entity';
 import { ProductService } from './product.service';
 
 @ApiTags('PRODUCT API')
 @Crud({
-  model: { type: Category },
+  model: { type: Product },
   routes: {
-    only: ['getOneBase', 'getManyBase'],
+    only: ['getOneBase', 'getManyBase', 'createOneBase', 'deleteOneBase'],
   },
 })
 @Controller('super-market/backend/product')
