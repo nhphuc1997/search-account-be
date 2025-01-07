@@ -1,12 +1,12 @@
 import { TypeOrmCrudService } from '@dataui/crud-typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Bank } from 'src/entities/Bank.entity';
+import { Category } from 'src/entities/Account.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
-export class BankService extends TypeOrmCrudService<Bank> {
-  constructor(@InjectRepository(Bank) repo: Repository<Bank>) {
-    super(repo)
+export class CategoryService extends TypeOrmCrudService<Category> {
+  constructor(@InjectRepository(Category) repo: Repository<Category>) {
+    super(repo);
   }
 }

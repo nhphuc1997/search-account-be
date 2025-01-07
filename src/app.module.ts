@@ -1,10 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AccountModule } from './modules/account/account.module';
-import { BankModule } from './modules/bank/bank.module';
-import { TransactionHistoryModule } from './modules/transaction-history/transaction-history.module';
-import { VerifyCodeModule } from './modules/verify-code/verify-code.module';
+import { CategoryModule } from './modules/category/category.module';
 
 @Module({
   imports: [
@@ -22,12 +19,9 @@ import { VerifyCodeModule } from './modules/verify-code/verify-code.module';
         entities: [],
         autoLoadEntities: true,
         synchronize: true,
-      })
+      }),
     }),
-    AccountModule,
-    BankModule,
-    TransactionHistoryModule,
-    VerifyCodeModule
+    CategoryModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}
