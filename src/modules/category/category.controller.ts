@@ -2,7 +2,7 @@ import { Controller } from '@nestjs/common';
 import { CategoryService } from './category.service';
 import { Crud, CrudController } from '@dataui/crud';
 import { ApiTags } from '@nestjs/swagger';
-import { Category } from 'src/entities/Account.entity';
+import { Category } from 'src/entities/Category.entity';
 
 @ApiTags('CATEGORY API')
 @Crud({

@@ -1,7 +1,7 @@
 import { TypeOrmCrudService } from '@dataui/crud-typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Category } from 'src/entities/Account.entity';
+import { Category } from 'src/entities/Category.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
