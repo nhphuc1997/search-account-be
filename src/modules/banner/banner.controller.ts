@@ -9,7 +9,7 @@ import { Banner } from 'src/entities/Banner.entity';
 @Crud({
   model: { type: Category },
   routes: {
-    only: ['getManyBase', 'createOneBase', 'deleteOneBase', 'updateOneBase'],
+    only: ['getManyBase', 'createOneBase', 'deleteOneBase'],
   },
 })
 @Controller('super-market/backend/banner')
