@@ -8,7 +8,13 @@ import { Category } from 'src/entities/Category.entity';
 @Crud({
   model: { type: Category },
   routes: {
-    only: ['getOneBase', 'getManyBase', 'createOneBase', 'deleteOneBase'],
+    only: [
+      'getOneBase',
+      'getManyBase',
+      'createOneBase',
+      'deleteOneBase',
+      'updateOneBase',
+    ],
   },
 })
 @Controller('super-market/backend/category')

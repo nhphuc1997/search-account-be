@@ -8,7 +8,13 @@ import { ProductService } from './product.service';
 @Crud({
   model: { type: Product },
   routes: {
-    only: ['getOneBase', 'getManyBase', 'createOneBase', 'deleteOneBase'],
+    only: [
+      'getOneBase',
+      'getManyBase',
+      'createOneBase',
+      'deleteOneBase',
+      'updateOneBase',
+    ],
   },
 })
 @Controller('super-market/backend/product')

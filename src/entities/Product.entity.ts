@@ -22,4 +22,12 @@ export class Product extends Base {
   @Column({ nullable: true })
   @ApiProperty()
   images: string;
+
+  @Column({ nullable: true })
+  @ApiProperty()
+  categoryId: number;
+
+  @Column({ nullable: true })
+  @ApiProperty()
+  categoryName: string;
 }

@@ -8,7 +8,13 @@ import { Order } from 'src/entities/Order.entity';
 @Crud({
   model: { type: Order },
   routes: {
-    only: ['getOneBase', 'getManyBase', 'createOneBase'],
+    only: [
+      'getOneBase',
+      'getManyBase',
+      'createOneBase',
+      'updateOneBase',
+      'deleteOneBase',
+    ],
   },
 })
 @Controller('super-market/backend/order')
