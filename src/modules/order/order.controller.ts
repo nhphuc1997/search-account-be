@@ -1,4 +1,4 @@
-import { Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { Crud, CrudController } from '@dataui/crud';
 import { ApiTags } from '@nestjs/swagger';
 import { OrderService } from './order.service';
@@ -21,8 +21,8 @@ import { Order } from 'src/entities/Order.entity';
 export class OrderController implements CrudController<Order> {
   constructor(public readonly service: OrderService) {}
 
-  @Post('/send-order-mail')
-  async sendMail() {
-    return await this.service.sendMail();
+  @Post('/send-order-sms')
+  async sendMail(@Body() orderNumber: string) {
+    return await this.service.sendSMS(orderNumber);
   }
 }
