@@ -18,4 +18,12 @@ export class Order extends Base {
   @Column({ nullable: true })
   @ApiProperty()
   user_name: string;
+
+  @Column({ nullable: true })
+  @ApiProperty()
+  address: string;
+
+  @Column({ nullable: true })
+  @ApiProperty()
+  email: string;
 }
