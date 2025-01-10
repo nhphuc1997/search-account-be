@@ -7,7 +7,7 @@ import { PaddleService } from './paddle.service';
 export class PaddleController {
   constructor(public readonly service: PaddleService) {}
 
-  @Get('/')
+  @Get('/product')
   async getProducts() {
     return await this.service.getProducts();
   }

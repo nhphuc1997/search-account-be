@@ -19,9 +19,14 @@ export class PaddleService {
     const priceCollection = this.paddle.prices.list();
     const products = await productCollection.next();
     const prices = await priceCollection.next();
-    return {
-      products,
-      prices,
-    };
+    return products.map((product: any) => {
+      const price = prices.find(
+        (_item: any) => _item?.productId === product?.id,
+      );
+      return {
+        ...product,
+        unitPrice: price?.unitPrice,
+      };
+    });
   }
 }
