@@ -9,13 +9,19 @@ export class PaddleService {
     this.paddle = new Paddle(
       'd6000163f75519dd000272461cab6ee9af6829380281af0e42',
       {
-        environment: Environment.sandbox, // or Environment.sandbox for accessing sandbox API
+        environment: Environment.sandbox,
       },
     );
   }
 
   async getProducts() {
     const productCollection = this.paddle.products.list();
-    return await productCollection.next();
+    const priceCollection = this.paddle.prices.list();
+    const products = await productCollection.next();
+    const prices = await priceCollection.next();
+    return {
+      products,
+      prices,
+    };
   }
 }
